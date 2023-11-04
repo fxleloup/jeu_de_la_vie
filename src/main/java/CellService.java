@@ -7,7 +7,7 @@ public class CellService {
         if(livingNeighbors > 3){
             return false;
         }
-        return livingNeighbors != 0;
+        return livingNeighbors >= 2;
     }
 
 }
