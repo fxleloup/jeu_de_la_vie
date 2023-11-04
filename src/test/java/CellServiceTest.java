@@ -31,4 +31,14 @@ class CellServiceTest {
 
         assertThat(nextStatus).isFalse();
     }
+
+    @Test
+    void nextCellStatusShouldBeTrueWhen2LivingNeighborsOfALivingCell() {
+        CellService service = new CellService();
+
+        boolean nextStatus = service.nextStatus(true, 2);
+
+        assertThat(nextStatus).isTrue();
+    }
+
 }

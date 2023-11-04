@@ -1,9 +1,10 @@
 public class CellService {
 
     public boolean nextStatus(boolean currentStatus, int livingNeighbors) {
-        if (livingNeighbors == 0 || livingNeighbors == 2)
-            return false;
-        return true;
+        if (livingNeighbors == 2) {
+            return currentStatus;
+        }
+        return livingNeighbors != 0;
     }
 
 }
