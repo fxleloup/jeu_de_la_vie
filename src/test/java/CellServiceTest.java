@@ -4,10 +4,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CellServiceTest {
+    CellService service = new CellService();
 
     @Test
     void nextCellStatusShouldBeTreûeWhen3livingNeighbors() {
-        CellService service = new CellService();
 
         boolean nextStatus = service.nextStatus(true, 3);
 
@@ -16,7 +16,6 @@ class CellServiceTest {
 
     @Test
     void nextCellStatusShouldBeTreûeWhen3livingNeighborsOfADeadCell() {
-        CellService service = new CellService();
 
         boolean nextStatus = service.nextStatus(false, 3);
 
@@ -25,7 +24,6 @@ class CellServiceTest {
 
     @Test
     void nextCellStatusShouldBeFalseWhenNoLivingNeighbors() {
-        CellService service = new CellService();
 
         boolean nextStatus = service.nextStatus(true, 0);
 
@@ -34,7 +32,6 @@ class CellServiceTest {
 
     @Test
     void nextCellStatusShouldBeFalseWhen2LivingNeighborsOfADeadCell() {
-        CellService service = new CellService();
 
         boolean nextStatus = service.nextStatus(false, 2);
 
@@ -43,7 +40,6 @@ class CellServiceTest {
 
     @Test
     void nextCellStatusShouldBeTrueWhen2LivingNeighborsOfALivingCell() {
-        CellService service = new CellService();
 
         boolean nextStatus = service.nextStatus(true, 2);
 
@@ -52,7 +48,6 @@ class CellServiceTest {
 
     @Test
     void nextCellStatusShouldBeFalseWhen4LivingNeighbors() {
-        CellService service = new CellService();
 
         boolean nextStatus = service.nextStatus(true, 4);
 
@@ -61,7 +56,6 @@ class CellServiceTest {
 
     @Test
     void nextCellStatusShouldBeFalseWhen1LivingNeighbor() {
-        CellService service = new CellService();
 
         boolean nextStatus = service.nextStatus(false, 1);
 
