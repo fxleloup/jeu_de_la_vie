@@ -15,6 +15,15 @@ class CellServiceTest {
     }
 
     @Test
+    void nextCellStatusShouldBeTreûeWhen3livingNeighborsOfADeadCell() {
+        CellService service = new CellService();
+
+        boolean nextStatus = service.nextStatus(false, 3);
+
+        assertThat(nextStatus).isTrue();
+    }
+
+    @Test
     void nextCellStatusShouldBeFalseWhenNoLivingNeighbors() {
         CellService service = new CellService();
 
@@ -41,4 +50,12 @@ class CellServiceTest {
         assertThat(nextStatus).isTrue();
     }
 
+    @Test
+    void nextCellStatusShouldBeFalseWhen4LivingNeighbors() {
+        CellService service = new CellService();
+
+        boolean nextStatus = service.nextStatus(true, 4);
+
+        assertThat(nextStatus).isFalse();
+    }
 }
